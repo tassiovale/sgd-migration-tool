@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Carga%20Horaria%20Limite%20Colaboracao%20Esporadica.xsd" generated="2015-09-30T15:04:05">
+<Carga_x0020_Horaria_x0020_Limite_x0020_Colaboracao_x0020_Esporadica>
+<nSequenciaCHL>1</nSequenciaCHL>
+<nCargaHorariaLimite>30</nCargaHorariaLimite>
+</Carga_x0020_Horaria_x0020_Limite_x0020_Colaboracao_x0020_Esporadica>
+<Carga_x0020_Horaria_x0020_Limite_x0020_Colaboracao_x0020_Esporadica>
+<nSequenciaCHL>2</nSequenciaCHL>
+<nCargaHorariaLimite>120</nCargaHorariaLimite>
+</Carga_x0020_Horaria_x0020_Limite_x0020_Colaboracao_x0020_Esporadica>
+</dataroot>

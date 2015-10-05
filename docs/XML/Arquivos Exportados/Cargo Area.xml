@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Cargo%20Area.xsd" generated="2015-09-30T15:04:15">
+<Cargo_x0020_Area>
+<nCodigoCargo>1</nCodigoCargo>
+<DescricaoCargo>Coordenador</DescricaoCargo>
+<lTitular>1</lTitular>
+</Cargo_x0020_Area>
+<Cargo_x0020_Area>
+<nCodigoCargo>2</nCodigoCargo>
+<DescricaoCargo>Vice Coordenador</DescricaoCargo>
+<lTitular>0</lTitular>
+</Cargo_x0020_Area>
+<Cargo_x0020_Area>
+<nCodigoCargo>3</nCodigoCargo>
+<DescricaoCargo>Diretor</DescricaoCargo>
+<lTitular>1</lTitular>
+</Cargo_x0020_Area>
+<Cargo_x0020_Area>
+<nCodigoCargo>4</nCodigoCargo>
+<DescricaoCargo>Vice Diretor</DescricaoCargo>
+<lTitular>0</lTitular>
+</Cargo_x0020_Area>
+</dataroot>

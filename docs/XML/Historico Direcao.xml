@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Historico%20Direcao.xsd" generated="2015-09-30T15:07:38">
+<Historico_x0020_Direcao>
+<Sequencia>7</Sequencia>
+<nCodigoDocente>40</nCodigoDocente>
+<nCodigoCargo>3</nCodigoCargo>
+<Data_x0020_Inicio>2006-07-07T00:00:00</Data_x0020_Inicio>
+<Data_x0020_Fim>2012-02-07T00:00:00</Data_x0020_Fim>
+</Historico_x0020_Direcao>
+<Historico_x0020_Direcao>
+<Sequencia>8</Sequencia>
+<nCodigoDocente>43</nCodigoDocente>
+<nCodigoCargo>3</nCodigoCargo>
+<Data_x0020_Inicio>2012-02-07T00:00:00</Data_x0020_Inicio>
+</Historico_x0020_Direcao>
+<Historico_x0020_Direcao>
+<Sequencia>9</Sequencia>
+<nCodigoDocente>88</nCodigoDocente>
+<nCodigoCargo>4</nCodigoCargo>
+<Data_x0020_Inicio>2008-04-15T00:00:00</Data_x0020_Inicio>
+<Data_x0020_Fim>2010-10-07T00:00:00</Data_x0020_Fim>
+</Historico_x0020_Direcao>
+<Historico_x0020_Direcao>
+<Sequencia>10</Sequencia>
+<nCodigoDocente>43</nCodigoDocente>
+<nCodigoCargo>4</nCodigoCargo>
+<Data_x0020_Inicio>2010-10-07T00:00:00</Data_x0020_Inicio>
+<Data_x0020_Fim>2012-02-07T00:00:00</Data_x0020_Fim>
+</Historico_x0020_Direcao>
+<Historico_x0020_Direcao>
+<Sequencia>11</Sequencia>
+<nCodigoDocente>40</nCodigoDocente>
+<nCodigoCargo>4</nCodigoCargo>
+<Data_x0020_Inicio>2012-02-07T00:00:00</Data_x0020_Inicio>
+</Historico_x0020_Direcao>
+</dataroot>

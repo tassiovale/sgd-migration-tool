@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Curso.xsd" generated="2015-09-30T15:05:21">
+<Curso>
+<nCodigoCurso>1</nCodigoCurso>
+<sDescricaoCurso>Bacharelado em Ciência Exatas e Tecnológicas</sDescricaoCurso>
+</Curso>
+<Curso>
+<nCodigoCurso>2</nCodigoCurso>
+<sDescricaoCurso>PROFMAT</sDescricaoCurso>
+</Curso>
+<Curso>
+<nCodigoCurso>3</nCodigoCurso>
+<sDescricaoCurso>Engenharia Civil</sDescricaoCurso>
+</Curso>
+<Curso>
+<nCodigoCurso>4</nCodigoCurso>
+<sDescricaoCurso>Engenharia de Computação</sDescricaoCurso>
+</Curso>
+<Curso>
+<nCodigoCurso>5</nCodigoCurso>
+<sDescricaoCurso>Engenharia Mecânica</sDescricaoCurso>
+</Curso>
+<Curso>
+<nCodigoCurso>6</nCodigoCurso>
+<sDescricaoCurso>Engenharia Sanitária e Ambiental</sDescricaoCurso>
+</Curso>
+<Curso>
+<nCodigoCurso>7</nCodigoCurso>
+<sDescricaoCurso>Bacharelado em Matemática</sDescricaoCurso>
+</Curso>
+<Curso>
+<nCodigoCurso>8</nCodigoCurso>
+<sDescricaoCurso>Bacharelado em Engenharia Elétrica</sDescricaoCurso>
+</Curso>
+</dataroot>

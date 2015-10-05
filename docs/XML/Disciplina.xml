@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Disciplina.xsd" generated="2015-09-30T15:05:40">
+<Disciplina>
+<nCodigoDisciplina>1</nCodigoDisciplina>
+<NomeDisciplina>Química</NomeDisciplina>
+<LocalDisciplina>CETEC-BCET</LocalDisciplina>
+<lFora_CETEC>0</lFora_CETEC>
+</Disciplina>
+<Disciplina>
+<nCodigoDisciplina>2</nCodigoDisciplina>
+<NomeDisciplina>Matemática</NomeDisciplina>
+<LocalDisciplina>CETEC-BCET</LocalDisciplina>
+<lFora_CETEC>0</lFora_CETEC>
+</Disciplina>
+<Disciplina>
+<nCodigoDisciplina>3</nCodigoDisciplina>
+<NomeDisciplina>Matemática - CCAB</NomeDisciplina>
+<LocalDisciplina>CCAB</LocalDisciplina>
+<lFora_CETEC>1</lFora_CETEC>
+</Disciplina>
+</dataroot>

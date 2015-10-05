@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Afastamento%20Docente.xsd" generated="2015-09-30T15:03:45">
+<Afastamento_x0020_Docente>
+<nCodigoDocente>12</nCodigoDocente>
+<Data_x0020_Inicio>2014-10-15T00:00:00</Data_x0020_Inicio>
+<Data_x0020_Final>2015-01-10T00:00:00</Data_x0020_Final>
+<Motivo>Retorno 10/01/2015</Motivo>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+<nCodigoMotivo>1</nCodigoMotivo>
+</Afastamento_x0020_Docente>
+<Afastamento_x0020_Docente>
+<nCodigoDocente>27</nCodigoDocente>
+<Data_x0020_Inicio>2010-10-04T00:00:00</Data_x0020_Inicio>
+<Data_x0020_Final>2014-07-30T00:00:00</Data_x0020_Final>
+<Motivo>Afastado Doutorado</Motivo>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+</Afastamento_x0020_Docente>
+<Afastamento_x0020_Docente>
+<nCodigoDocente>28</nCodigoDocente>
+<Data_x0020_Inicio>2015-01-01T00:00:00</Data_x0020_Inicio>
+<Data_x0020_Final>2015-01-05T00:00:00</Data_x0020_Final>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+<nCodigoMotivo>1</nCodigoMotivo>
+</Afastamento_x0020_Docente>
+<Afastamento_x0020_Docente>
+<nCodigoDocente>29</nCodigoDocente>
+<Data_x0020_Inicio>2014-02-19T00:00:00</Data_x0020_Inicio>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+<nCodigoMotivo>1</nCodigoMotivo>
+</Afastamento_x0020_Docente>
+<Afastamento_x0020_Docente>
+<nCodigoDocente>30</nCodigoDocente>
+<Data_x0020_Inicio>2013-10-16T00:00:00</Data_x0020_Inicio>
+<Data_x0020_Final>2014-03-30T00:00:00</Data_x0020_Final>
+<Motivo>Licença Maternidade</Motivo>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+</Afastamento_x0020_Docente>
+<Afastamento_x0020_Docente>
+<nCodigoDocente>34</nCodigoDocente>
+<Data_x0020_Inicio>2010-12-21T00:00:00</Data_x0020_Inicio>
+<Data_x0020_Final>2014-12-01T00:00:00</Data_x0020_Final>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+<nCodigoMotivo>1</nCodigoMotivo>
+</Afastamento_x0020_Docente>
+<Afastamento_x0020_Docente>
+<nCodigoDocente>37</nCodigoDocente>
+<Data_x0020_Inicio>2014-05-10T00:00:00</Data_x0020_Inicio>
+<Motivo>Encerra 16/03/2018</Motivo>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+<nCodigoMotivo>1</nCodigoMotivo>
+</Afastamento_x0020_Docente>
+<Afastamento_x0020_Docente>
+<nCodigoDocente>38</nCodigoDocente>
+<Data_x0020_Inicio>2014-04-20T00:00:00</Data_x0020_Inicio>
+<Motivo>Retorna  em: 20/09/2015</Motivo>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+<nCodigoMotivo>1</nCodigoMotivo>
+</Afastamento_x0020_Docente>
+<Afastamento_x0020_Docente>
+<nCodigoDocente>42</nCodigoDocente>
+<Data_x0020_Inicio>2010-09-08T00:00:00</Data_x0020_Inicio>
+<Data_x0020_Final>2013-09-08T00:00:00</Data_x0020_Final>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+<nCodigoMotivo>1</nCodigoMotivo>
+</Afastamento_x0020_Docente>
+<Afastamento_x0020_Docente>
+<nCodigoDocente>42</nCodigoDocente>
+<Data_x0020_Inicio>2014-08-26T00:00:00</Data_x0020_Inicio>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+<nCodigoMotivo>6</nCodigoMotivo>
+</Afastamento_x0020_Docente>
+<Afastamento_x0020_Docente>
+<nCodigoDocente>50</nCodigoDocente>
+<Data_x0020_Inicio>2014-08-15T00:00:00</Data_x0020_Inicio>
+<Motivo>Retorno 15/08/2015</Motivo>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+<nCodigoMotivo>7</nCodigoMotivo>
+</Afastamento_x0020_Docente>
+<Afastamento_x0020_Docente>
+<nCodigoDocente>61</nCodigoDocente>
+<Data_x0020_Inicio>2014-05-01T00:00:00</Data_x0020_Inicio>
+<Motivo>Retorno 01/04/2016</Motivo>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+<nCodigoMotivo>1</nCodigoMotivo>
+</Afastamento_x0020_Docente>
+<Afastamento_x0020_Docente>
+<nCodigoDocente>78</nCodigoDocente>
+<Data_x0020_Inicio>2010-12-22T00:00:00</Data_x0020_Inicio>
+<Data_x0020_Final>2014-12-01T00:00:00</Data_x0020_Final>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+<nCodigoMotivo>1</nCodigoMotivo>
+</Afastamento_x0020_Docente>
+<Afastamento_x0020_Docente>
+<nCodigoDocente>80</nCodigoDocente>
+<Data_x0020_Inicio>2012-01-31T00:00:00</Data_x0020_Inicio>
+<Motivo>Mandado Segurança</Motivo>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+<nCodigoMotivo>3</nCodigoMotivo>
+</Afastamento_x0020_Docente>
+<Afastamento_x0020_Docente>
+<nCodigoDocente>91</nCodigoDocente>
+<Data_x0020_Inicio>2013-11-01T00:00:00</Data_x0020_Inicio>
+<Motivo>Encerra em: 01/11/2015</Motivo>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+<nCodigoMotivo>1</nCodigoMotivo>
+</Afastamento_x0020_Docente>
+<Afastamento_x0020_Docente>
+<nCodigoDocente>99</nCodigoDocente>
+<Data_x0020_Inicio>2010-07-17T00:00:00</Data_x0020_Inicio>
+<Data_x0020_Final>2010-07-27T00:00:00</Data_x0020_Final>
+<Motivo>Afastamento</Motivo>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+</Afastamento_x0020_Docente>
+<Afastamento_x0020_Docente>
+<nCodigoDocente>99</nCodigoDocente>
+<Data_x0020_Inicio>2011-07-25T00:00:00</Data_x0020_Inicio>
+<Data_x0020_Final>2013-07-25T00:00:00</Data_x0020_Final>
+<Motivo>Cedido para o IFSP</Motivo>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+</Afastamento_x0020_Docente>
+<Afastamento_x0020_Docente>
+<nCodigoDocente>52</nCodigoDocente>
+<Data_x0020_Inicio>2015-01-30T00:00:00</Data_x0020_Inicio>
+<Motivo>término 30/01/2018</Motivo>
+<Interrompe_x0020_Estágio>0</Interrompe_x0020_Estágio>
+<nCodigoMotivo>1</nCodigoMotivo>
+</Afastamento_x0020_Docente>
+</dataroot>

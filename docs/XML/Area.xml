@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+<Area>
+<nCodigoArea>1</nCodigoArea>
+<sDescricaoArea>Sistemas Mecânicos e Estruturais - SIMES</sDescricaoArea>
+</Area>
+<Area>
+<nCodigoArea>3</nCodigoArea>
+<sDescricaoArea>Química e Bioquímica - AQBQ</sDescricaoArea>
+</Area>
+<Area>
+<nCodigoArea>4</nCodigoArea>
+<sDescricaoArea>Matemática e Estatística - AME</sDescricaoArea>
+</Area>
+<Area>
+<nCodigoArea>6</nCodigoArea>
+<sDescricaoArea>Tecnologia Ambiental - ATAM</sDescricaoArea>
+</Area>
+<Area>
+<nCodigoArea>7</nCodigoArea>
+<sDescricaoArea>Sistemas Elétricos e Computacionais - SECOMP</sDescricaoArea>
+</Area>
+<Area>
+<nCodigoArea>8</nCodigoArea>
+<sDescricaoArea>Física - AFIS</sDescricaoArea>
+</Area>
+</list>

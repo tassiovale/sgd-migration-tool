@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Tipo%20Colaboracao%20Esporadica.xsd" generated="2015-09-30T15:08:28">
+<Tipo_x0020_Colaboracao_x0020_Esporadica>
+<nCodigoColaboracao>1</nCodigoColaboracao>
+<sDescricaoColaboracao>Palestras</sDescricaoColaboracao>
+<nSequenciaCHL>1</nSequenciaCHL>
+</Tipo_x0020_Colaboracao_x0020_Esporadica>
+<Tipo_x0020_Colaboracao_x0020_Esporadica>
+<nCodigoColaboracao>2</nCodigoColaboracao>
+<sDescricaoColaboracao>Conferências</sDescricaoColaboracao>
+<nSequenciaCHL>1</nSequenciaCHL>
+</Tipo_x0020_Colaboracao_x0020_Esporadica>
+<Tipo_x0020_Colaboracao_x0020_Esporadica>
+<nCodigoColaboracao>3</nCodigoColaboracao>
+<sDescricaoColaboracao>Atividades artisticas e culturais</sDescricaoColaboracao>
+<nSequenciaCHL>1</nSequenciaCHL>
+</Tipo_x0020_Colaboracao_x0020_Esporadica>
+<Tipo_x0020_Colaboracao_x0020_Esporadica>
+<nCodigoColaboracao>4</nCodigoColaboracao>
+<sDescricaoColaboracao>Projetos de ensino, pesquisa e extensão</sDescricaoColaboracao>
+<nSequenciaCHL>2</nSequenciaCHL>
+</Tipo_x0020_Colaboracao_x0020_Esporadica>
+<Tipo_x0020_Colaboracao_x0020_Esporadica>
+<nCodigoColaboracao>5</nCodigoColaboracao>
+<sDescricaoColaboracao>Natureza científica ou tecnólogica(inovação)</sDescricaoColaboracao>
+<nSequenciaCHL>2</nSequenciaCHL>
+</Tipo_x0020_Colaboracao_x0020_Esporadica>
+</dataroot>

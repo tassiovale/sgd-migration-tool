@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Carga%20Horaria.xsd" generated="2015-09-30T15:03:15">
+<Carga_x0020_Horaria>
+<nCargaHoraria>1</nCargaHoraria>
+<sDescricaoCarga>40h</sDescricaoCarga>
+</Carga_x0020_Horaria>
+<Carga_x0020_Horaria>
+<nCargaHoraria>2</nCargaHoraria>
+<sDescricaoCarga>20h</sDescricaoCarga>
+</Carga_x0020_Horaria>
+<Carga_x0020_Horaria>
+<nCargaHoraria>3</nCargaHoraria>
+<sDescricaoCarga>DE</sDescricaoCarga>
+</Carga_x0020_Horaria>
+</dataroot>

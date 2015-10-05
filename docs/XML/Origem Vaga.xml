@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Origem%20Vaga.xsd" generated="2015-09-30T15:08:11">
+<Origem_x0020_Vaga>
+<nCodigoOrigemVaga>1</nCodigoOrigemVaga>
+<sDescricaoOrigem>Aposentadoria</sDescricaoOrigem>
+</Origem_x0020_Vaga>
+<Origem_x0020_Vaga>
+<nCodigoOrigemVaga>2</nCodigoOrigemVaga>
+<sDescricaoOrigem>Substituição</sDescricaoOrigem>
+</Origem_x0020_Vaga>
+<Origem_x0020_Vaga>
+<nCodigoOrigemVaga>3</nCodigoOrigemVaga>
+<sDescricaoOrigem>Criada por Lei</sDescricaoOrigem>
+</Origem_x0020_Vaga>
+<Origem_x0020_Vaga>
+<nCodigoOrigemVaga>4</nCodigoOrigemVaga>
+<sDescricaoOrigem>Vacância</sDescricaoOrigem>
+</Origem_x0020_Vaga>
+</dataroot>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Motivo%20Afastamento.xsd" generated="2015-09-30T15:07:49">
+<Motivo_x0020_Afastamento>
+<nCodigoMotivo>1</nCodigoMotivo>
+<sDescricaoAfastamento>Doutorado</sDescricaoAfastamento>
+</Motivo_x0020_Afastamento>
+<Motivo_x0020_Afastamento>
+<nCodigoMotivo>2</nCodigoMotivo>
+<sDescricaoAfastamento>Licença Médica</sDescricaoAfastamento>
+</Motivo_x0020_Afastamento>
+<Motivo_x0020_Afastamento>
+<nCodigoMotivo>3</nCodigoMotivo>
+<sDescricaoAfastamento>Acompanhar conjuge</sDescricaoAfastamento>
+</Motivo_x0020_Afastamento>
+<Motivo_x0020_Afastamento>
+<nCodigoMotivo>4</nCodigoMotivo>
+<sDescricaoAfastamento>Cedido a outro órgão</sDescricaoAfastamento>
+</Motivo_x0020_Afastamento>
+<Motivo_x0020_Afastamento>
+<nCodigoMotivo>5</nCodigoMotivo>
+<sDescricaoAfastamento>Mestrado</sDescricaoAfastamento>
+</Motivo_x0020_Afastamento>
+<Motivo_x0020_Afastamento>
+<nCodigoMotivo>6</nCodigoMotivo>
+<sDescricaoAfastamento>Licença Prêmio</sDescricaoAfastamento>
+</Motivo_x0020_Afastamento>
+<Motivo_x0020_Afastamento>
+<nCodigoMotivo>7</nCodigoMotivo>
+<sDescricaoAfastamento>Pós-Doutorado</sDescricaoAfastamento>
+</Motivo_x0020_Afastamento>
+</dataroot>
