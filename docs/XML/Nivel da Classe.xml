@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Nivel%20da%20Classe.xsd" generated="2015-09-30T15:08:02">
+<list>
 <Nivel_x0020_da_x0020_Classe>
 <nCodigoNivel>1</nCodigoNivel>
 <Descricao_x0020_Nivel>001</Descricao_x0020_Nivel>
@@ -20,4 +20,4 @@
 <nCodigoNivel>5</nCodigoNivel>
 <Descricao_x0020_Nivel>005</Descricao_x0020_Nivel>
 </Nivel_x0020_da_x0020_Classe>
-</dataroot>
+</list>

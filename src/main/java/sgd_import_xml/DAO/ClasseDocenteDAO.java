@@ -41,6 +41,11 @@ public class ClasseDocenteDAO extends GenericDAO<ClasseDocente> implements Seria
 	public void saveClasseDocente(ClasseDocente ch) {
 		super.save(ch);
 	}
+	
+	@Transactional
+	public void saveClasseDocente(List<ClasseDocente> ch) {
+		super.save(ch);
+	}
 
 	/**
 	 * Updates an AreaConhecimento in the database.

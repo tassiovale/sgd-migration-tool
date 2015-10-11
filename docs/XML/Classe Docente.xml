@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Classe%20Docente.xsd" generated="2015-09-30T15:04:25">
+<list>
 <Classe_x0020_Docente>
 <nCodigoClasse>1</nCodigoClasse>
 <DescricaoClasse>Titular</DescricaoClasse>
@@ -20,4 +20,4 @@
 <nCodigoClasse>5</nCodigoClasse>
 <DescricaoClasse>Associado</DescricaoClasse>
 </Classe_x0020_Docente>
-</dataroot>
+</list>

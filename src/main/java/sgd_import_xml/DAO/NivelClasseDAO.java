@@ -34,6 +34,11 @@ public class NivelClasseDAO extends GenericDAO<NivelClasse> implements Serializa
 	public void saveNivelClasse(NivelClasse ch) {
 		super.save(ch);
 	}
+	
+	@Transactional
+	public void saveNivelClasse(List<NivelClasse> ch) {
+		super.save(ch);
+	}
 
 	/**
 	 * Updates an AreaConhecimento in the database.

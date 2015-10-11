@@ -5,6 +5,9 @@ import javax.persistence.*;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+
 import java.util.List;
 
 
@@ -14,15 +17,20 @@ import java.util.List;
  */
 @Entity
 @Table(name="origem_vaga")
+@XStreamAlias("Origem_x0020_Vaga")
 public class OrigemVaga implements Serializable, BaseEntity {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id_origem_vaga")
+	@XStreamAlias("nCodigoOrigemVaga")
+	@XStreamAsAttribute
 	private int idOrigemVaga;
 
 	@Column(name="origem_vaga")
+	@XStreamAlias("sDescricaoOrigem")
+	@XStreamAsAttribute
 	private String origemVaga;
 
 	//bi-directional many-to-one association to Docente

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Titulacao.xsd" generated="2015-09-30T15:08:37">
+<list>
 <Titulacao>
 <nCodigoTitulacao>1</nCodigoTitulacao>
 <DescricaoTitulacao>Doutor</DescricaoTitulacao>
@@ -16,4 +16,4 @@
 <nCodigoTitulacao>4</nCodigoTitulacao>
 <DescricaoTitulacao>Graduado</DescricaoTitulacao>
 </Titulacao>
-</dataroot>
+</list>

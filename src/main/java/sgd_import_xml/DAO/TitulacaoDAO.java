@@ -35,6 +35,11 @@ public class TitulacaoDAO extends GenericDAO<Titulacao> implements Serializable{
 	public void saveTitulacao(Titulacao ac) {
 		super.save(ac);
 	}
+	
+	@Transactional
+	public void saveTitulacao(List<Titulacao> ac) {
+		super.save(ac);
+	}
 
 	/**
 	 * Updates an AreaConhecimento in the database.

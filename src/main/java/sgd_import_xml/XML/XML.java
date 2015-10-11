@@ -9,7 +9,7 @@ import java.util.List;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
-import sgd_import_xml.DAO.AreaConhecimentoDAO;
+import sgd_import_xml.DAO.*;
 import sgd_import_xml.entity.*;
 
 /**
@@ -69,7 +69,7 @@ public class XML {
 	 * Le o arquvo XML e salva as Areas de conhecimento validas no Banco
 	 */
 	@SuppressWarnings("unchecked")
-	public List<AreaConhecimento> importarAreaConhecimento(){
+	public void importarAreaConhecimento(){
 		AreaConhecimentoDAO areaConhecimentoDAO = new AreaConhecimentoDAO();
 		
 		List<AreaConhecimento> lista;
@@ -79,15 +79,142 @@ public class XML {
 		
 		for(AreaConhecimento ac : lista){
 			if(ac.getId() == 0 || ac.getNomeArea() == null){
-				System.out.println("Area de conhecimento Invalida: ID: "+ ac.getIdArea()+ "Area de conhecimento: "+ ac.getNomeArea());
+				System.out.println(ac.getClass().toString()+" Invalida: ID: "+ ac.getIdArea()+ " "+ac.getClass().toString()+" : "+ac.getNomeArea());
 				lista.remove(ac);
 			}
 			
-			System.out.println("Area de conhecimento Salva: ID: "+ ac.getIdArea()+ ", Area de conhecimento: "+ ac.getNomeArea());
+			System.out.println(ac.getClass().toString()+" Salva: ID: "+ ac.getIdArea()+ " "+ac.getClass().toString()+" : "+ac.getNomeArea());
 		}
 		
 		areaConhecimentoDAO.saveArea(lista); 	
 		this.closeXML();
-		return lista;	
 	}	
+	
+	
+	/**
+	 * Le o arquvo XML e salva as Carga Horaria validas no Banco
+	 */
+	@SuppressWarnings("unchecked")
+	public void importarCargaHoraria(){
+		CargaHorariaDAO cargaHorarioDAO = new CargaHorariaDAO();
+		List<CargaHoraria> lista;
+		this.abrirXML("Carga Horaria.xml");
+		stream.alias("Carga_x0020_Horaria", CargaHoraria.class);
+		
+		
+//		stream.registerConverter(new CargahorariaConverter()); // caso precise de conversor
+
+		
+		lista = (List<CargaHoraria>) stream.fromXML(input);
+	
+		for(CargaHoraria ac : lista){
+			if(ac.getId() == 0 || ac.getCargaHoraria() == null){
+				System.out.println(ac.getClass().toString()+" Invalida: ID: "+ ac.getIdCargaHoraria()+ " "+ac.getClass().toString()+" : "+ac.getCargaHoraria());
+				lista.remove(ac);
+			}
+			
+			System.out.println(ac.getClass().toString()+" Salva: ID: "+ ac.getIdCargaHoraria()+ " "+ac.getClass().toString()+" : "+ac.getCargaHoraria());
+		}
+		
+		
+		
+		cargaHorarioDAO.saveCargaHoraria(lista);
+		this.closeXML();	
+	}	
+	
+	
+
+	/**
+	 * Le o arquvo XML e salva as Classe docente validas no Banco
+	 */
+	@SuppressWarnings("unchecked")
+	public void importarClasseDocente(){
+		ClasseDocenteDAO classeDocenteDAO = new ClasseDocenteDAO();
+		List<ClasseDocente> lista;
+		this.abrirXML("Classe Docente.xml");
+		stream.alias("Classe_x0020_Docente", ClasseDocente.class);
+		
+		
+//		stream.registerConverter(new CargahorariaConverter()); // caso precise de conversor
+
+		
+		lista = (List<ClasseDocente>) stream.fromXML(input);
+	
+		for(ClasseDocente ac : lista){
+			if(ac.getId() == 0 || ac.getClasseDocente() == null){
+				System.out.println(ac.getClass().toString()+" Invalida: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getClasseDocente());
+				lista.remove(ac);
+			}
+			
+			System.out.println(ac.getClass().toString()+" Salva: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getClasseDocente());
+		}
+		
+		
+		
+		classeDocenteDAO.saveClasseDocente(lista);
+		this.closeXML();	
+	}	
+	
+	
+	/**
+	 * Le o arquvo XML e salva as Titulacao validas no Banco
+	 */
+	@SuppressWarnings("unchecked")
+	public void importarTitulacao(){
+		TitulacaoDAO titulacaoDAO = new TitulacaoDAO();
+		List<Titulacao> lista;
+		this.abrirXML("Titulacao.xml");
+		stream.alias("Titulacao", Titulacao.class);
+		
+		
+//		stream.registerConverter(new CargahorariaConverter()); // caso precise de conversor
+
+		
+		lista = (List<Titulacao>) stream.fromXML(input);
+	
+		for(Titulacao ac : lista){
+			if(ac.getId() == 0 || ac.getTitulacao() == null){
+				System.out.println(ac.getClass().toString()+" Invalida: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getTitulacao());
+				lista.remove(ac);
+			}
+			
+			System.out.println(ac.getClass().toString()+" Salva: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getTitulacao());
+		}
+		
+		
+		titulacaoDAO.saveTitulacao(lista);
+		this.closeXML();	
+	}	
+	
+	
+	/**
+	 * Le o arquvo XML e salva as Titulacao validas no Banco
+	 */
+	@SuppressWarnings("unchecked")
+	public void importarNivelClasse(){
+		NivelClasseDAO nivelClasse = new NivelClasseDAO();
+		List<NivelClasse> lista;
+		this.abrirXML("Nivel da Classe.xml");
+		stream.alias("Nivel_x0020_da_x0020_Classe", NivelClasse.class);
+		
+		
+//		stream.registerConverter(new CargahorariaConverter()); // caso precise de conversor
+
+		
+		lista = (List<NivelClasse>) stream.fromXML(input);
+	
+		for(NivelClasse ac : lista){
+			if(ac.getId() == 0 || ac.getNivelClasse() == null){
+				System.out.println(ac.getClass().toString()+" Invalida: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getNivelClasse());
+				lista.remove(ac);
+			}
+			
+			System.out.println(ac.getClass().toString()+" Salva: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getNivelClasse());
+		}
+		
+		
+		nivelClasse.saveNivelClasse(lista);
+		this.closeXML();	
+	}
+	
 }

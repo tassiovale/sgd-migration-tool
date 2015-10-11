@@ -39,6 +39,11 @@ public class OrigemVagaDAO extends GenericDAO<OrigemVaga> implements Serializabl
 	public void saveOrigemVaga(OrigemVaga doc) {
 		super.save(doc);
 	}
+	
+	@Transactional
+	public void saveOrigemVaga(List<OrigemVaga> doc) {
+		super.save(doc);
+	}
 
 	/**
 	 * Updates an user in the database.

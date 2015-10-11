@@ -31,7 +31,7 @@ public class CargaHoraria implements Serializable, BaseEntity {
 	@Column(name="carga_horaria")
 	@XStreamAlias("sDescricaoCarga")
 	@XStreamAsAttribute
-	private float cargaHoraria;
+	private String cargaHoraria;
 
 	//bi-directional many-to-one association to Docente
 	@OneToMany(mappedBy="cargaHoraria")
@@ -50,11 +50,11 @@ public class CargaHoraria implements Serializable, BaseEntity {
 		this.idCargaHoraria = idCargaHoraria;
 	}
 
-	public float getCargaHoraria() {
+	public String getCargaHoraria() {
 		return this.cargaHoraria;
 	}
 
-	public void setCargaHoraria(float cargaHoraria) {
+	public void setCargaHoraria(String cargaHoraria) {
 		this.cargaHoraria = cargaHoraria;
 	}
 

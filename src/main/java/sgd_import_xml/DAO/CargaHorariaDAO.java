@@ -40,6 +40,11 @@ public class CargaHorariaDAO extends GenericDAO<CargaHoraria> implements Seriali
 	public void saveCargaHoraria(CargaHoraria ch) {
 		super.save(ch);
 	}
+	
+	@Transactional
+	public void saveCargaHoraria(List<CargaHoraria> ch) {
+		super.save(ch);
+	}
 
 	/**
 	 * Updates an AreaConhecimento in the database.

@@ -5,6 +5,10 @@ import javax.persistence.*;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
+
 import java.util.List;
 
 
@@ -14,6 +18,7 @@ import java.util.List;
  */
 @Entity
 @Table(name="classe_docente")
+@XStreamAlias("Classe_x0020_Docente")
 public class ClasseDocente implements Serializable, BaseEntity {
 
 	private static final long serialVersionUID = 1L;
@@ -21,14 +26,19 @@ public class ClasseDocente implements Serializable, BaseEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id_classe_docente")
+	@XStreamAlias("nCodigoClasse")
+	@XStreamAsAttribute
 	private int idClasseDocente;
 
 	@Column(name="classe_docente")
+	@XStreamAlias("DescricaoClasse")
+	@XStreamAsAttribute
 	private String classeDocente;
 
 	//bi-directional many-to-one association to Docente
 	@OneToMany(mappedBy="classeDocente")
 	@Cascade({CascadeType.SAVE_UPDATE})
+	@XStreamImplicit // defina lista implicita
 	private List<Docente> docentes;
 
 	public ClasseDocente() {

@@ -4,6 +4,15 @@ package sgd_import_xml.XML;
 public class Testes {
 	public static void main(String[] args) {
 		XML xml = new XML();
-		xml.importarAreaConhecimento();
+	
+		xml.importarAreaConhecimento();	
+		System.out.println("NEXT");
+		xml.importarCargaHoraria();
+		System.out.println("NEXT");
+		xml.importarClasseDocente();
+		System.out.println("NEXT");
+		xml.importarTitulacao();
+		System.out.println("NEXT");
+		xml.importarNivelClasse();
 	}
 }
