@@ -4,6 +4,10 @@ import java.io.Serializable;
 import javax.persistence.*;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
+
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+
 import java.util.Date;
 import java.util.List;
 
@@ -13,17 +17,24 @@ import java.util.List;
  * 
  */
 @Entity
+@XStreamAlias("Docente")
 public class Docente implements Serializable, BaseEntity {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@XStreamAlias("nMatriculaSiape")
+	@XStreamAsAttribute
 	private int siape;
 
 	@Temporal(TemporalType.DATE)
 	@Column(name="data_ingresso")
+	@XStreamAlias("dDataIngressoCETEC")
+	@XStreamAsAttribute
 	private Date dataIngresso;
 
 	@Column(unique=true)
+	@XStreamAlias("sEmail")
+	@XStreamAsAttribute
 	private String email;
 
 	private String nome;

@@ -86,6 +86,10 @@ public class AreaConhecimentoDAO extends GenericDAO<AreaConhecimento> implements
 		return (AreaConhecimento) getCriteria().add(Restrictions.eq("nomeArea", area)).uniqueResult();
 	}
 	
+	public AreaConhecimento findByID(int area){
+		return (AreaConhecimento) getCriteria().add(Restrictions.eq("idArea", area)).uniqueResult();
+	}
+	
 	@SuppressWarnings("rawtypes")
 	public List findByParteAreaConhecimento(String parteArea){
 		return getCriteria().add(Restrictions.ilike("nomeArea", "%" + parteArea + "%")).list();

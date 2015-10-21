@@ -2,6 +2,10 @@ package sgd_import_xml.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+
 import java.util.List;
 
 /**
@@ -10,14 +14,19 @@ import java.util.List;
  */
 @Entity
 @Table(name = "curso_graduacao")
+@XStreamAlias("Curso")
 public class CursoGraduacao implements Serializable, BaseEntity {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_cursoGrad")
+	@XStreamAlias("nCodigoCurso")
+	@XStreamAsAttribute
 	private int idCursoGrad;
 
+	
+	@XStreamAlias("sDescricaoCurso")
+	@XStreamAsAttribute
 	private String curso;
 
 	// bi-directional one-to-many association to Docente

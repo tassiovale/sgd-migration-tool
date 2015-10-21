@@ -79,6 +79,10 @@ public class ClasseDocenteDAO extends GenericDAO<ClasseDocente> implements Seria
 		return (ClasseDocente) getCriteria().add(Restrictions.eq("classeDocente", classe)).uniqueResult();
 	}
 	
+	public ClasseDocente findByID(int classe){
+		return (ClasseDocente) getCriteria().add(Restrictions.eq("idClasseDocente", classe)).uniqueResult();
+	}
+	
 	@SuppressWarnings("rawtypes")
 	public List findByParteClasseDocente(String classe){
 		return getCriteria().add(Restrictions.ilike("classeDocente", "%" + classe + "%")).list();

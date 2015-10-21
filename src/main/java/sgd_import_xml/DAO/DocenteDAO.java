@@ -36,6 +36,10 @@ public class DocenteDAO extends GenericDAO<Docente> implements Serializable{
 	public void saveDocente(Docente doc) {
 		super.save(doc);
 	}
+	@Transactional
+	public void saveDocente(List<Docente> doc) {
+		super.save(doc);
+	}
 
 	/**
 	 * Updates an user in the database.

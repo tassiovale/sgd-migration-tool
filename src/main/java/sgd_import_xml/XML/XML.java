@@ -10,6 +10,7 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import sgd_import_xml.DAO.*;
+import sgd_import_xml.converters.DocenteConverter;
 import sgd_import_xml.entity.*;
 
 /**
@@ -188,7 +189,7 @@ public class XML {
 	
 	
 	/**
-	 * Le o arquvo XML e salva as Titulacao validas no Banco
+	 * Le o arquvo XML e salva as Nivel da Classe validas no Banco
 	 */
 	@SuppressWarnings("unchecked")
 	public void importarNivelClasse(){
@@ -216,5 +217,93 @@ public class XML {
 		nivelClasse.saveNivelClasse(lista);
 		this.closeXML();	
 	}
+	
+	/**
+	 * Le o arquvo XML e salva as Origem da vaga validas no Banco
+	 */
+	@SuppressWarnings("unchecked")
+	public void importarOrigemVaga(){
+		OrigemVagaDAO origemVagaDAO = new OrigemVagaDAO();
+		List<OrigemVaga> lista;
+		this.abrirXML("Origem Vaga.xml");
+		stream.alias("Origem_x0020_Vaga", OrigemVaga.class);
+		
+		
+//		stream.registerConverter(new CargahorariaConverter()); // caso precise de conversor
+
+		
+		lista = (List<OrigemVaga>) stream.fromXML(input);
+	
+		for(OrigemVaga ac : lista){
+			if(ac.getId() == 0 || ac.getOrigemVaga() == null){
+				System.out.println(ac.getClass().toString()+" Invalida: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getOrigemVaga());
+				lista.remove(ac);
+			}
+			
+			System.out.println(ac.getClass().toString()+" Salva: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getOrigemVaga());
+		}
+		
+		
+		origemVagaDAO.saveOrigemVaga(lista);
+		this.closeXML();	
+	}
+	
+	
+	/**
+	 * Le o arquvo XML e salva os cursos e validas no Banco
+	 */
+	@SuppressWarnings("unchecked")
+	public void importarCursoGraduacao(){
+		CursoGraduacaoDAO cursoGraduacaoDAO = new CursoGraduacaoDAO();
+		List<CursoGraduacao> lista;
+		this.abrirXML("Curso.xml");
+		stream.alias("Curso", CursoGraduacao.class);
+
+		
+		lista = (List<CursoGraduacao>) stream.fromXML(input);
+	
+		for(CursoGraduacao ac : lista){
+			if(ac.getId() == 0 || ac.getCursoGrad() == null){
+				System.out.println(ac.getClass().toString()+" Invalida: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getCursoGrad());
+				lista.remove(ac);
+			}
+			
+			System.out.println(ac.getClass().toString()+" Salva: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getCursoGrad());
+		}
+		
+		
+		cursoGraduacaoDAO.saveCursoGraduacao(lista);
+		this.closeXML();	
+	}
+	
+	
+	/**
+	 * Le o arquvo XML e salva os docentes e validas no Banco
+	 */
+	@SuppressWarnings("unchecked")
+	public void importarDocentes(){
+		DocenteDAO docenteDAO = new DocenteDAO();
+		List<Docente> lista;
+		this.abrirXML("Docente.xml");
+		stream.alias("Docente", Docente.class);
+		
+		stream.registerConverter(new DocenteConverter()); 
+		
+		lista = (List<Docente>) stream.fromXML(input);
+	
+//		for(Docente ac : lista){
+//			if(ac.getId() == 0){
+//				System.out.println(ac.getClass().toString()+" Invalida: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getSiape());
+//				lista.remove(ac);
+//			}
+//			
+//			System.out.println(ac.getClass().toString()+" Salva: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getSiape());
+//		}
+//		
+//		
+//		docenteDAO.saveDocente(lista);
+		this.closeXML();	
+	}
+	
 	
 }

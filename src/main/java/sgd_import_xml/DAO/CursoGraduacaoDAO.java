@@ -36,6 +36,11 @@ public class CursoGraduacaoDAO extends GenericDAO<CursoGraduacao> implements Ser
 	public void saveCursoGraduacao(CursoGraduacao cg) {
 		super.save(cg);
 	}
+	
+	@Transactional
+	public void saveCursoGraduacao(List<CursoGraduacao> cg) {
+		super.save(cg);
+	}
 
 	/**
 	 * Updates an user in the database.
