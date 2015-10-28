@@ -7,17 +7,17 @@ public class Testes {
 	
 		xml.importarAreaConhecimento();	
 		System.out.println("NEXT");
-//		xml.importarCargaHoraria();
-//		System.out.println("NEXT");
+		xml.importarCargaHoraria();
+		System.out.println("NEXT");
 		xml.importarClasseDocente();
 		System.out.println("NEXT");
-//		xml.importarTitulacao();
-//		System.out.println("NEXT");
-//		xml.importarNivelClasse();
-//		System.out.println("NEXT");
-//		xml.importarOrigemVaga();
-//		System.out.println("NEXT");
-//		xml.importarCursoGraduacao();
+		xml.importarTitulacao();
+		System.out.println("NEXT");
+		xml.importarNivelClasse();
+		System.out.println("NEXT");
+		xml.importarOrigemVaga();
+		System.out.println("NEXT");
+		xml.importarCursoGraduacao();
 		
 		
 		xml.importarDocentes();

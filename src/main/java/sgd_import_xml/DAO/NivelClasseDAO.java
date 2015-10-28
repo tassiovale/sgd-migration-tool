@@ -76,6 +76,10 @@ public class NivelClasseDAO extends GenericDAO<NivelClasse> implements Serializa
 		return (NivelClasse) getCriteria().add(Restrictions.eq("nivelClasse", nivel)).uniqueResult();
 	}
 	
+	public NivelClasse findByID(int nivel){
+		return (NivelClasse) getCriteria().add(Restrictions.eq("idNivelClasse", nivel)).uniqueResult();
+	}
+	
 	@SuppressWarnings("rawtypes")
 	public List findByParteNivelClasse(String nivel){
 		return getCriteria().add(Restrictions.ilike("nivelClasse", "%" + nivel + "%")).list();

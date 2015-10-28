@@ -78,6 +78,10 @@ public class TitulacaoDAO extends GenericDAO<Titulacao> implements Serializable{
 		return (Titulacao) getCriteria().add(Restrictions.eq("titulacao",titulacao)).uniqueResult();
 	}
 	
+	public Titulacao findByID(int titulacao){
+		return (Titulacao) getCriteria().add(Restrictions.eq("idTitulacao",titulacao)).uniqueResult();
+	}
+	
 	@SuppressWarnings("rawtypes")
 	public List findByParteTitulacao(String titulacao){
 		return getCriteria().add(Restrictions.ilike("titulacao", "%" + titulacao + "%")).list();

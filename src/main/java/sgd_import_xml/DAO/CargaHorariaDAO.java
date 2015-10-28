@@ -78,5 +78,9 @@ public class CargaHorariaDAO extends GenericDAO<CargaHoraria> implements Seriali
 	public CargaHoraria findByCargaHoraria(float ch){
 		return (CargaHoraria) getCriteria().add(Restrictions.eq("cargaHoraria", ch)).uniqueResult();
 	}
+	
+	public CargaHoraria findByID(int ch){
+		return (CargaHoraria) getCriteria().add(Restrictions.eq("idCargaHoraria", ch)).uniqueResult();
+	}
 
 }

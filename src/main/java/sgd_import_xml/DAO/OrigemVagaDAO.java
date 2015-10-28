@@ -77,6 +77,10 @@ public class OrigemVagaDAO extends GenericDAO<OrigemVaga> implements Serializabl
 		return (OrigemVaga) getCriteria().add(Restrictions.ilike("origemVaga", ov)).uniqueResult();
 	}
 	
+	public OrigemVaga findByID(int ov){
+		return (OrigemVaga) getCriteria().add(Restrictions.eq("idOrigemVaga", ov)).uniqueResult();
+	}
+	
 	@SuppressWarnings("rawtypes")
 	public List findByParteOrigemVaga(String ov){
 		return getCriteria().add(Restrictions.ilike("origemVaga", "%" + ov + "%")).list();

@@ -291,17 +291,17 @@ public class XML {
 		
 		lista = (List<Docente>) stream.fromXML(input);
 	
-//		for(Docente ac : lista){
-//			if(ac.getId() == 0){
-//				System.out.println(ac.getClass().toString()+" Invalida: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getSiape());
-//				lista.remove(ac);
-//			}
-//			
-//			System.out.println(ac.getClass().toString()+" Salva: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getSiape());
-//		}
-//		
-//		
-//		docenteDAO.saveDocente(lista);
+		for(Docente ac : lista){
+			if(ac.getSiape() == 0){
+				System.out.println(ac.getClass().toString()+" Invalida: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getSiape());
+				lista.remove(ac);
+			}
+			
+			System.out.println(ac.getClass().toString()+" Salva: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getSiape());
+		}
+		
+		
+		docenteDAO.saveDocente(lista);
 		this.closeXML();	
 	}
 	
