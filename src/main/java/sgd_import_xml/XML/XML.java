@@ -296,7 +296,6 @@ public class XML {
 				System.out.println(ac.getClass().toString()+" Invalida: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getSiape());
 				lista.remove(ac);
 			}
-			
 			System.out.println(ac.getClass().toString()+" Salva: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getSiape());
 		}
 		

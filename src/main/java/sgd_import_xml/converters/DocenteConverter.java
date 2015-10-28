@@ -79,7 +79,7 @@ public class DocenteConverter implements Converter{
 				docente.setOrigemVaga(this.origemVagaDAO.findByID(Integer.parseInt(reader.getValue())));
 				System.out.println("Origem da vaga: "+ docente.getOrigemVaga().getOrigemVaga());
 			}else if(reader.getNodeName().equals("sEmail")){
-				docente.setEmail(reader.getValue());
+				docente.setEmail(reader.getValue().split(";")[0]);
 				System.out.println("Email: "+ docente.getEmail());
 			}else if(reader.getNodeName().equals("nCargaHoraria")){
 				docente.setCargaHoraria(this.cargaHorariaDAO.findByID(Integer.parseInt(reader.getValue())));
