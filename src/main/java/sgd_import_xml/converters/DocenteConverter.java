@@ -6,7 +6,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
@@ -87,7 +86,8 @@ public class DocenteConverter implements Converter{
 			}else if(reader.getNodeName().equals("nTelefone")){
 				String telefone[] = reader.getValue().split("/");
 				docente.setTelefone1(telefone[0]);
-//				if(telefone.length >= 1) docente.setTelefone2(telefone[1]);
+				System.out.println("TELEFONE "+telefone.length);
+				if(telefone.length > 1) docente.setTelefone2(telefone[1]);
 			}
 			
 			reader.moveUp();

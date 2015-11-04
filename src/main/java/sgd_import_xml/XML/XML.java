@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import com.thoughtworks.xstream.XStream;
@@ -290,17 +292,20 @@ public class XML {
 		stream.registerConverter(new DocenteConverter()); 
 		
 		lista = (List<Docente>) stream.fromXML(input);
-	
+		
+		HashMap<Integer, Docente> hashDocente = new HashMap<Integer,Docente>();
+		ArrayList<Docente> listaSemRepeticao = new ArrayList<Docente>();
 		for(Docente ac : lista){
-			if(ac.getSiape() == 0){
-				System.out.println(ac.getClass().toString()+" Invalida: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getSiape());
-				lista.remove(ac);
+			if(!hashDocente.containsKey(ac.getSiape())){
+				System.out.println(ac.getClass().toString()+" Salva: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getSiape());
+				hashDocente.put(ac.getSiape(), ac);
+				listaSemRepeticao.add(ac);
 			}
-			System.out.println(ac.getClass().toString()+" Salva: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getSiape());
 		}
 		
-		
-		docenteDAO.saveDocente(lista);
+		System.out.println(lista.size());
+		System.out.println(listaSemRepeticao.size());
+		docenteDAO.saveDocente(listaSemRepeticao);
 		this.closeXML();	
 	}
 	
