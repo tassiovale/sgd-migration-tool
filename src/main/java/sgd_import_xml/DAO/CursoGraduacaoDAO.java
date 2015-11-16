@@ -10,12 +10,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-
-import sgd_import_xml.entity.*;
 import sgd_import_xml.database.GenericDAO;
+import sgd_import_xml.entity.CursoGraduacao;
+
+
 
 @Repository
 public class CursoGraduacaoDAO extends GenericDAO<CursoGraduacao> implements Serializable{
+	
 
 	private static final long serialVersionUID = 1L;
 	
@@ -36,7 +38,7 @@ public class CursoGraduacaoDAO extends GenericDAO<CursoGraduacao> implements Ser
 	public void saveCursoGraduacao(CursoGraduacao cg) {
 		super.save(cg);
 	}
-	
+
 	@Transactional
 	public void saveCursoGraduacao(List<CursoGraduacao> cg) {
 		super.save(cg);

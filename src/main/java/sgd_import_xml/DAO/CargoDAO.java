@@ -35,6 +35,11 @@ public class CargoDAO extends GenericDAO<Cargo> implements Serializable{
 	@Transactional
 	public void saveCargo(Cargo c) {
 		super.save(c);
+	}
+	
+	@Transactional
+	public void saveCargo(List<Cargo> c) {
+		super.save(c);
 	} 
 
 	/**

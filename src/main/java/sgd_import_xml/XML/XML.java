@@ -119,8 +119,6 @@ public class XML {
 			System.out.println(ac.getClass().toString()+" Salva: ID: "+ ac.getIdCargaHoraria()+ " "+ac.getClass().toString()+" : "+ac.getCargaHoraria());
 		}
 		
-		
-		
 		cargaHorarioDAO.saveCargaHoraria(lista);
 		this.closeXML();	
 	}	
@@ -136,11 +134,7 @@ public class XML {
 		List<ClasseDocente> lista;
 		this.abrirXML("Classe Docente.xml");
 		stream.alias("Classe_x0020_Docente", ClasseDocente.class);
-		
-		
-//		stream.registerConverter(new CargahorariaConverter()); // caso precise de conversor
-
-		
+				
 		lista = (List<ClasseDocente>) stream.fromXML(input);
 	
 		for(ClasseDocente ac : lista){
@@ -151,8 +145,6 @@ public class XML {
 			
 			System.out.println(ac.getClass().toString()+" Salva: ID: "+ ac.getId()+ " "+ac.getClass().toString()+" : "+ ac.getClasseDocente());
 		}
-		
-		
 		
 		classeDocenteDAO.saveClasseDocente(lista);
 		this.closeXML();	
@@ -168,11 +160,7 @@ public class XML {
 		List<Titulacao> lista;
 		this.abrirXML("Titulacao.xml");
 		stream.alias("Titulacao", Titulacao.class);
-		
-		
-//		stream.registerConverter(new CargahorariaConverter()); // caso precise de conversor
-
-		
+				
 		lista = (List<Titulacao>) stream.fromXML(input);
 	
 		for(Titulacao ac : lista){
@@ -229,11 +217,7 @@ public class XML {
 		List<OrigemVaga> lista;
 		this.abrirXML("Origem Vaga.xml");
 		stream.alias("Origem_x0020_Vaga", OrigemVaga.class);
-		
-		
-//		stream.registerConverter(new CargahorariaConverter()); // caso precise de conversor
-
-		
+				
 		lista = (List<OrigemVaga>) stream.fromXML(input);
 	
 		for(OrigemVaga ac : lista){
@@ -309,5 +293,95 @@ public class XML {
 		this.closeXML();	
 	}
 	
+	
+	/**
+	 * Le o arquvo XML e salva os cargos validos no Banco
+	 * Este metodo tem faz algumas conversoes usando varios xml`s
+	 */
+	public void importarCargo(){
+		CargoDAO cargoDAO = new CargoDAO();
+		ArrayList<Cargo> listaCargo = new ArrayList<Cargo>();
+		Cargo cargo;
+	
+		try {
+			System.out.println("CENTRO");
+			CentroDAO centroDAO = new CentroDAO();
+			String cargos[] = {"Diretor", "Vice Diretor", "Gestor Ensino", "Gestor Pesquisa", "Gestor Extensão"};
+			for(String nomeCargo: cargos){
+				System.out.println("PROXIMO CARGO");
+				for(Centro c: centroDAO.findAll()){
+					cargo = new Cargo();
+					cargo.setNomeCargo(nomeCargo);
+					cargo.setCentro(c);
+					cargo.setVinculo(3);
+					System.out.println(cargo.getClass().toString()+" Salva: Nome: "+ cargo.getNomeCargo()+ " Vinculo : "+ cargo.getVinculo() + " CENTRO: "+ c.getNomeCentro());
+					listaCargo.add(cargo);
+				}
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			System.out.println("CURSO");
+			CursoGraduacaoDAO cursoGraduacaoDAO = new CursoGraduacaoDAO();
+			String cargos[] = {"Diretor", "Vice Diretor"};
+			System.out.println("PROXIMO CARGO");
+			for(String nomeCargo: cargos){
+				for(CursoGraduacao cg: cursoGraduacaoDAO.findAll()){
+					cargo = new Cargo();
+					cargo.setNomeCargo(nomeCargo);
+					cargo.setCursoGraduacao(cg);
+					cargo.setVinculo(2);
+					System.out.println(cargo.getClass().toString()+" Salva: Nome: "+ cargo.getNomeCargo()+ " Vinculo : "+ cargo.getVinculo() + " CURSO: "+ cg.getCursoGrad());
+					listaCargo.add(cargo);
+				}
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		try {
+			System.out.println("AREA CONHECIMENTO");
+			AreaConhecimentoDAO areaConhecimentoDAO = new AreaConhecimentoDAO();
+			String cargos[] = {"Diretor", "Vice Diretor"};
+			for(String nomeCargo: cargos){
+				System.out.println("PROXIMO CARGO");
+				for(AreaConhecimento a: areaConhecimentoDAO.findAll()){
+					cargo = new Cargo();
+					cargo.setNomeCargo(nomeCargo);
+					cargo.setArea(a);
+					cargo.setVinculo(1);
+					System.out.println(cargo.getClass().toString()+" Salva: Nome: "+ cargo.getNomeCargo()+ " Vinculo : "+ cargo.getVinculo() + " AREA: "+ a.getNomeArea());
+					listaCargo.add(cargo);
+				}
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		cargoDAO.saveCargo(listaCargo);
+		
+	}
+	
+	/**
+	 * Le o arquvo XML e salva os cargos validos no Banco
+	 * Este metodo tem faz algumas conversoes usando varios xml`s
+	 */
+	@SuppressWarnings("unchecked")
+	public void importarHistoricoCargo(){
+		this.abrirXML("Docente.xml");
+		stream.alias("Docente", Docente.class);
+		stream.registerConverter(new DocenteConverter()); 		
+		
+		List<Docente> listaDocente = (List<Docente>) stream.fromXML(input);
+		for(Docente d: listaDocente) System.out.println("ID: "+d.getIdXml()+"\nSIAPE: "+d.getSiape());
+		
+		this.closeXML();	
+	}
 	
 }

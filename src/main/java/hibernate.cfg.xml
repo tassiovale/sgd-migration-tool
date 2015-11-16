@@ -38,5 +38,6 @@
         <mapping class="sgd_import_xml.entity.SalaDocente"/>
         <mapping class="sgd_import_xml.entity.Titulacao"/>
         <mapping class="sgd_import_xml.entity.Usuario"/>
+        <mapping class="sgd_import_xml.entity.Centro"/>
     </session-factory>
 </hibernate-configuration>

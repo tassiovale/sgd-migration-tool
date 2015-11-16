@@ -6,6 +6,8 @@ import javax.persistence.*;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
+import sgd_import_xml.database.GenericDAO;
+
 import java.util.List;
 
 /**
@@ -15,7 +17,7 @@ import java.util.List;
 @Entity
 @Table(name = "curso_graduacao")
 @XStreamAlias("Curso")
-public class CursoGraduacao implements Serializable, BaseEntity {
+public class CursoGraduacao extends GenericDAO<AreaConhecimento> implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@Id

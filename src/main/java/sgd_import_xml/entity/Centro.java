@@ -10,7 +10,6 @@ import java.util.List;
 
 @Entity
 @Table(name="centro")
-
 public class Centro implements Serializable, BaseEntity {
 	public String getSiglaCentro() {
 		return siglaCentro;

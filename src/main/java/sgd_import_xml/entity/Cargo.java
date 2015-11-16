@@ -2,7 +2,6 @@ package sgd_import_xml.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import javax.persistence.criteria.CriteriaUpdate;
 
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;

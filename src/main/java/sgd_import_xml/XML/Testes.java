@@ -1,5 +1,7 @@
 package sgd_import_xml.XML;
 
+import sgd_import_xml.DAO.CentroDAO;
+import sgd_import_xml.entity.Centro;
 
 public class Testes {
 	public static void main(String[] args) {
@@ -18,8 +20,20 @@ public class Testes {
 		xml.importarOrigemVaga();
 		System.out.println("NEXT");
 		xml.importarCursoGraduacao();
-		
-		
+		System.out.println("NEXT");		
 		xml.importarDocentes();
+		
+		
+		
+	Centro centro = new Centro();	
+	centro.setNomeCentro("Centro de Ciencias Exatas e Tecnologicas");
+	centro.setSiglaCentro("CETEC");
+	CentroDAO centroDAO = new CentroDAO();
+	centroDAO.saveCentro(centro);
+	
+	
+	xml.importarCargo();	
+		
+		
 	}
 }
