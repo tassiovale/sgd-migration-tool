@@ -70,6 +70,11 @@ public class CursoGraduacaoDAO extends GenericDAO<CursoGraduacao> implements Ser
 		return (CursoGraduacao) getCriteria().add(
 				Restrictions.eq("curso", curso)).uniqueResult();
 	}
+	
+	public CursoGraduacao findByID(int id) {
+		return (CursoGraduacao) getCriteria().add(
+				Restrictions.eq("idCursoGrad", id)).uniqueResult();
+	}
 
 	@SuppressWarnings("rawtypes")
 	public List findByParteCursoGraduacao(String curso) {

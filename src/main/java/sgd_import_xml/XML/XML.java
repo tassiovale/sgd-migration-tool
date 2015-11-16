@@ -326,7 +326,7 @@ public class XML {
 		try {
 			System.out.println("CURSO");
 			CursoGraduacaoDAO cursoGraduacaoDAO = new CursoGraduacaoDAO();
-			String cargos[] = {"Diretor", "Vice Diretor"};
+			String cargos[] = {"Coordenador", "Vice Coordenador"};
 			System.out.println("PROXIMO CARGO");
 			for(String nomeCargo: cargos){
 				for(CursoGraduacao cg: cursoGraduacaoDAO.findAll()){
@@ -347,7 +347,7 @@ public class XML {
 		try {
 			System.out.println("AREA CONHECIMENTO");
 			AreaConhecimentoDAO areaConhecimentoDAO = new AreaConhecimentoDAO();
-			String cargos[] = {"Diretor", "Vice Diretor"};
+			String cargos[] = {"Coordenador", "Vice Coordenador"};
 			for(String nomeCargo: cargos){
 				System.out.println("PROXIMO CARGO");
 				for(AreaConhecimento a: areaConhecimentoDAO.findAll()){
@@ -372,16 +372,39 @@ public class XML {
 	 * Le o arquvo XML e salva os cargos validos no Banco
 	 * Este metodo tem faz algumas conversoes usando varios xml`s
 	 */
+	
+	@SuppressWarnings("unchecked")
+	public List<DocenteCurso> getDocenteCurso(){
+		List<DocenteCurso> listaDocenteCurso;
+		this.abrirXML("DocenteCurso.xml");
+		stream.alias("DocenteCurso", DocenteCurso.class);
+		listaDocenteCurso = (List<DocenteCurso>) stream.fromXML(input);
+		this.closeXML();
+		return listaDocenteCurso;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<CargoArea> getCargoArea(){
+		List<CargoArea> listaCargoArea;
+		this.abrirXML("Cargo Area.xml");
+		stream.alias("Cargo_x0020_Area", CargoArea.class);
+		listaCargoArea = (List<CargoArea>) stream.fromXML(input);
+		this.closeXML();
+		return listaCargoArea;
+	}
+	
+	
+
 	@SuppressWarnings("unchecked")
 	public void importarHistoricoCargo(){
-		this.abrirXML("Docente.xml");
-		stream.alias("Docente", Docente.class);
-		stream.registerConverter(new DocenteConverter()); 		
+		List<HistoricoCargoCurso> listaCargoCurso;
+		this.abrirXML("Historico Cargo Curso.xml");
+		stream.alias("Historico_x0020_Cargo_x0020_Curso", HistoricoCargoCurso.class);
+		listaCargoCurso = (List<HistoricoCargoCurso>) stream.fromXML(input);	
+		this.closeXML();
 		
-		List<Docente> listaDocente = (List<Docente>) stream.fromXML(input);
-		for(Docente d: listaDocente) System.out.println("ID: "+d.getIdXml()+"\nSIAPE: "+d.getSiape());
 		
-		this.closeXML();	
+		
 	}
 	
 }

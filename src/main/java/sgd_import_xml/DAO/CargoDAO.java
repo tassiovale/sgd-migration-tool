@@ -3,6 +3,7 @@ package sgd_import_xml.DAO;
 import java.io.Serializable;
 import java.util.List;
 
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -64,6 +65,12 @@ public class CargoDAO extends GenericDAO<Cargo> implements Serializable{
 	
 	public Cargo findByCargo(String cargo){
 		return (Cargo) getCriteria().add(Restrictions.eq("nomeCargo", cargo)).uniqueResult();
+	}
+	
+	public Cargo findByCargoAndVinculo(String cargo,int vinculo){
+		Criteria criteria = getCriteria();
+		criteria.add(Restrictions.and(Restrictions.eq("nomeCargo", cargo), Restrictions.eq("vinculo", vinculo)));
+		return (Cargo) criteria.uniqueResult();		
 	}
 	
 	@SuppressWarnings("rawtypes")

@@ -83,6 +83,12 @@ public class DocenteDAO extends GenericDAO<Docente> implements Serializable{
 		return (List<Docente>) criteria.list();
 	}
 	
+	
+	public Docente findByIdXml(int idXml){
+		return (Docente) getCriteria().add(Restrictions.eq("IdXml",idXml)).uniqueResult();
+
+	}
+	
 //	public void updatePropriedades(String propriedade){
 //		System.out.println("update Docente d set d."+propriedade+ " = none");
 //		Query query = getSession().createQuery("update Docente d set d."+propriedade+ " = none");
