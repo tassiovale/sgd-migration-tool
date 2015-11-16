@@ -2,12 +2,10 @@ package sgd_import_xml.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.persistence.criteria.CriteriaUpdate;
+
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
-
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
-import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 import java.util.List;
 
@@ -17,25 +15,35 @@ import java.util.List;
  * 
  */
 @Entity
-@XStreamAlias("Cargo_x0020_Area")
 public class Cargo implements Serializable, BaseEntity {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id_cargo")
-	@XStreamAlias("nCodigoCargo")
-	@XStreamAsAttribute
 	private int idCargo;
 
 	@Column(name="nome_cargo")
-	@XStreamAlias("DescricaoCargo")
-	@XStreamAsAttribute
 	private String nomeCargo;
+	
+	@Column(name="vinculo")
+	private int vinculo;
+	
+	@Column(name="area_conhecimento")
+	@JoinColumn(name="id_area")
+	private AreaConhecimento area;
+	
+	@Column(name="curso_graduacao")
+	@JoinColumn(name="id_cursoGrad")
+	private Centro centro;
+	
+	@Column(name="id_centro")
+	@JoinColumn(name="id_cursoGrad")
+	private CursoGraduacao cursoGraduacao;
 
 	//bi-directional many-to-one association to CargoDocente
 	@OneToMany(mappedBy="cargo")
 	@Cascade({CascadeType.SAVE_UPDATE})
-	@XStreamImplicit // defina lista implicita  
 	private List<CargoDocente> cargoDocentes;
 
 	public Cargo() {
@@ -77,6 +85,7 @@ public class Cargo implements Serializable, BaseEntity {
 		return cargoDocente;
 	}*/
 
+	@Override
 	public Long getId() {
 		return (long) idCargo;
 	}
@@ -97,6 +106,41 @@ public class Cargo implements Serializable, BaseEntity {
 		// TODO Auto-generated method stub
 		return super.hashCode();
 	}
-	
+
+	public int getVinculo() {
+		return vinculo;
+	}
+
+	public void setVinculo(int vinculo) {
+		this.vinculo = vinculo;
+	}
+
+	public AreaConhecimento getArea() {
+		return area;
+	}
+
+	public void setArea(AreaConhecimento area) {
+		this.area = area;
+	}
+
+	public Centro getCentro() {
+		return centro;
+	}
+
+	public void setCentro(Centro centro) {
+		this.centro = centro;
+	}
+
+	public CursoGraduacao getCursoGraduacao() {
+		return cursoGraduacao;
+	}
+
+	public void setCursoGraduacao(CursoGraduacao cursoGraduacao) {
+		this.cursoGraduacao = cursoGraduacao;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 	
 }

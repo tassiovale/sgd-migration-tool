@@ -80,6 +80,7 @@ public class CargoDocente implements Serializable, BaseEntity {
 		this.docente = docente;
 	}
 
+	@Override
 	public Long getId() {
 		return (long) idCargoDocente;
 	}

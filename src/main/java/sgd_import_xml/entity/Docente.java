@@ -4,10 +4,6 @@ import java.io.Serializable;
 import javax.persistence.*;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
-
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
-
 import java.util.Date;
 import java.util.List;
 
@@ -17,24 +13,18 @@ import java.util.List;
  * 
  */
 @Entity
-@XStreamAlias("Docente")
 public class Docente implements Serializable, BaseEntity {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@XStreamAlias("nMatriculaSiape")
-	@XStreamAsAttribute
 	private int siape;
 
 	@Temporal(TemporalType.DATE)
 	@Column(name="data_ingresso")
-	@XStreamAlias("dDataIngressoCETEC")
-	@XStreamAsAttribute
+	
 	private Date dataIngresso;
 
 	@Column(unique=true)
-	@XStreamAlias("sEmail")
-	@XStreamAsAttribute
 	private String email;
 
 	private String nome;
@@ -44,7 +34,10 @@ public class Docente implements Serializable, BaseEntity {
 
 	@Column(name="telefone_2")
 	private String telefone2;
-
+    
+	@Column(name="status")
+	private String status;
+	
 	//bi-directional many-to-one association to CargoDocente
 	@OneToMany(mappedBy="docente")
 	//@OneToMany(mappedBy="docente", cascade = {CascadeType.REFRESH})
@@ -66,6 +59,10 @@ public class Docente implements Serializable, BaseEntity {
 	@ManyToOne
 	@JoinColumn(name="id_area")
 	private AreaConhecimento area;
+	
+	@ManyToOne
+	@JoinColumn(name="id_centro")
+	private Centro centro;
 
 	//bi-directional many-to-one association to CargaHoraria
 	@ManyToOne
@@ -103,12 +100,11 @@ public class Docente implements Serializable, BaseEntity {
 	private SalaDocente salaDocente;
 	
 	//bi-directional many-to-one association to CursoGraduacao
-		@ManyToOne
-		@JoinColumn(name="id_cursoGrad")
-		private CursoGraduacao cursoGraduacao;
+	@ManyToOne
+	@JoinColumn(name="id_cursoGrad")
+	private CursoGraduacao cursoGraduacao;
 
-	public Docente() {
-	}
+	public Docente() {}
 
 	public int getSiape() {
 		return this.siape;
@@ -246,6 +242,14 @@ public class Docente implements Serializable, BaseEntity {
 		return contoleRit;
 	}
 
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
 	public AreaConhecimento getArea() {
 		return this.area;
 	}
@@ -256,6 +260,14 @@ public class Docente implements Serializable, BaseEntity {
 
 	public CargaHoraria getCargaHoraria() {
 		return this.cargaHoraria;
+	}
+
+	public Centro getCentro() {
+		return centro;
+	}
+
+	public void setCentro(Centro centro) {
+		this.centro = centro;
 	}
 
 	public void setCargaHoraria(CargaHoraria cargaHoraria) {
@@ -332,6 +344,7 @@ public class Docente implements Serializable, BaseEntity {
 		this.cursoGraduacao = cursoGraduacao;
 	}
 
+	@Override
 	public Long getId() {
 		return Long.valueOf(siape);
 	}

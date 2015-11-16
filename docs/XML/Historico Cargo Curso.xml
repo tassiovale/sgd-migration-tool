@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Historico%20Cargo%20Curso.xsd" generated="2015-09-30T15:07:28">
+<list>
 <Historico_x0020_Cargo_x0020_Curso>
 <nCodigoCurso>1</nCodigoCurso>
 <Sequencia>45</Sequencia>
@@ -328,4 +328,4 @@
 <nCodigoCargo>2</nCodigoCargo>
 <Data_x0020_Inicio>2015-03-12T00:00:00</Data_x0020_Inicio>
 </Historico_x0020_Cargo_x0020_Curso>
-</dataroot>
+</list>
