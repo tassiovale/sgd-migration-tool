@@ -43,7 +43,7 @@ public class Cargo implements Serializable, BaseEntity {
 	//bi-directional many-to-one association to CargoDocente
 	@OneToMany(mappedBy="cargo")
 	@Cascade({CascadeType.SAVE_UPDATE})
-	private List<CargoDocente> cargoDocentes;
+	private List<HistoricoCargo> cargoDocentes;
 
 	public Cargo() {
 	}
@@ -64,11 +64,11 @@ public class Cargo implements Serializable, BaseEntity {
 		this.nomeCargo = nomeCargo;
 	}
 
-	public List<CargoDocente> getCargoDocentes() {
+	public List<HistoricoCargo> getCargoDocentes() {
 		return this.cargoDocentes;
 	}
 
-	public void setCargoDocentes(List<CargoDocente> cargoDocentes) {
+	public void setCargoDocentes(List<HistoricoCargo> cargoDocentes) {
 		this.cargoDocentes = cargoDocentes;
 	}
 

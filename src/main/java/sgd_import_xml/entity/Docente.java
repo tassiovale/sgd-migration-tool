@@ -53,7 +53,7 @@ public class Docente implements Serializable, BaseEntity {
 	//bi-directional many-to-one association to CargoDocente
 	@OneToMany(mappedBy="docente")
 	//@OneToMany(mappedBy="docente", cascade = {CascadeType.REFRESH})
-	private List<CargoDocente> cargoDocentes;
+	private List<HistoricoCargo> cargoDocentes;
 
 	//bi-directional many-to-one association to ContolePit
 	@OneToMany(mappedBy="docente")
@@ -167,22 +167,22 @@ public class Docente implements Serializable, BaseEntity {
 		this.telefone2 = telefone2;
 	}
 
-	public List<CargoDocente> getCargoDocentes() {
+	public List<HistoricoCargo> getCargoDocentes() {
 		return this.cargoDocentes;
 	}
 
-	public void setCargoDocentes(List<CargoDocente> cargoDocentes) {
+	public void setCargoDocentes(List<HistoricoCargo> cargoDocentes) {
 		this.cargoDocentes = cargoDocentes;
 	}
 
-	public CargoDocente addCargoDocente(CargoDocente cargoDocente) {
+	public HistoricoCargo addCargoDocente(HistoricoCargo cargoDocente) {
 		getCargoDocentes().add(cargoDocente);
 		cargoDocente.setDocente(this);
 
 		return cargoDocente;
 	}
 
-	public CargoDocente removeCargoDocente(CargoDocente cargoDocente) {
+	public HistoricoCargo removeCargoDocente(HistoricoCargo cargoDocente) {
 		getCargoDocentes().remove(cargoDocente);
 		cargoDocente.setDocente(null);
 

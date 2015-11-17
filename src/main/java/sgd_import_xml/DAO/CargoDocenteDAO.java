@@ -15,7 +15,7 @@ import sgd_import_xml.database.GenericDAO;
 
 
 @Repository
-public class CargoDocenteDAO extends GenericDAO<CargoDocente> implements Serializable{
+public class CargoDocenteDAO extends GenericDAO<HistoricoCargo> implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
@@ -32,7 +32,7 @@ public class CargoDocenteDAO extends GenericDAO<CargoDocente> implements Seriali
 	 * @param user the user to be saved
 	 */
 	@Transactional
-	public void saveCargoDocente(CargoDocente ch) {
+	public void saveCargoDocente(HistoricoCargo ch) {
 		super.save(ch);
 	}
 
@@ -42,7 +42,7 @@ public class CargoDocenteDAO extends GenericDAO<CargoDocente> implements Seriali
 	 * @param AreaConhecimento the AreaConhecimento to be updated
 	 */
 	@Transactional
-	public void update(CargoDocente ch) {
+	public void update(HistoricoCargo ch) {
 		super.update(ch);
 	}
 
@@ -52,7 +52,7 @@ public class CargoDocenteDAO extends GenericDAO<CargoDocente> implements Seriali
 	 * @param user the user to be removed
 	 */
 	@Transactional
-	public void remove(CargoDocente ch) {
+	public void remove(HistoricoCargo ch) {
 		super.delete(ch);
 	}
 

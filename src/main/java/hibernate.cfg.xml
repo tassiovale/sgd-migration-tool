@@ -23,7 +23,7 @@
         <mapping class="sgd_import_xml.entity.BaseEntity"/>
         <mapping class="sgd_import_xml.entity.CargaHoraria"/>
         <mapping class="sgd_import_xml.entity.Cargo"/>
-        <mapping class="sgd_import_xml.entity.CargoDocente"/>
+        <mapping class="sgd_import_xml.entity.HistoricoCargo"/>
         <mapping class="sgd_import_xml.entity.ClasseDocente"/>
         <mapping class="sgd_import_xml.entity.ContolePit"/>
         <mapping class="sgd_import_xml.entity.ContoleRit"/>

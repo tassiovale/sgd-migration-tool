@@ -11,7 +11,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name="cargo_docente")
-public class CargoDocente implements Serializable, BaseEntity {
+public class HistoricoCargo implements Serializable, BaseEntity {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -37,7 +37,7 @@ public class CargoDocente implements Serializable, BaseEntity {
 	@JoinColumn(name="siape")
 	private Docente docente;
 
-	public CargoDocente() {
+	public HistoricoCargo() {
 	}
 
 	public int getIdCargoDocente() {
@@ -87,17 +87,21 @@ public class CargoDocente implements Serializable, BaseEntity {
 
 	@Override
 	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
 		return super.equals(obj);
 	}
 
 	@Override
 	public int hashCode() {
+		// TODO Auto-generated method stub
 		return super.hashCode();
 	}
 
 	@Override
 	public String toString() {
+		// TODO Auto-generated method stub
 		return super.toString();
 	}
-		
+	
+	
 }

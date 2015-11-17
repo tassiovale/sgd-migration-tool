@@ -13,6 +13,7 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import sgd_import_xml.DAO.*;
 import sgd_import_xml.converters.DocenteConverter;
+import sgd_import_xml.converters.HistoricoCargoCursoConverter;
 import sgd_import_xml.entity.*;
 
 /**
@@ -47,7 +48,7 @@ public class XML {
 			input = new BufferedReader(new InputStreamReader (new FileInputStream (this.patch + url), "UTF-8")); 
 			System.out.println("Arquivo aberto");
 		} catch (Exception e) {
-			System.out.println("Arquivo n√£o encontrado");
+			System.out.println("Arquivo n„o encontrado");
 			e.printStackTrace();
 		}
 	}
@@ -187,11 +188,7 @@ public class XML {
 		List<NivelClasse> lista;
 		this.abrirXML("Nivel da Classe.xml");
 		stream.alias("Nivel_x0020_da_x0020_Classe", NivelClasse.class);
-		
-		
-//		stream.registerConverter(new CargahorariaConverter()); // caso precise de conversor
-
-		
+			
 		lista = (List<NivelClasse>) stream.fromXML(input);
 	
 		for(NivelClasse ac : lista){
@@ -374,34 +371,73 @@ public class XML {
 	 */
 	
 	@SuppressWarnings("unchecked")
-	public List<DocenteCurso> getDocenteCurso(){
+	public HashMap<Integer, CursoGraduacao> getDocenteCurso(){
+		@SuppressWarnings("unused")
 		List<DocenteCurso> listaDocenteCurso;
 		this.abrirXML("DocenteCurso.xml");
 		stream.alias("DocenteCurso", DocenteCurso.class);
 		listaDocenteCurso = (List<DocenteCurso>) stream.fromXML(input);
+		HashMap<Integer, CursoGraduacao> map = new HashMap<Integer, CursoGraduacao>();
+		CursoGraduacaoDAO cursoGraduacaoDAO = new CursoGraduacaoDAO();
+		for(DocenteCurso dc: (List<DocenteCurso>) stream.fromXML(input)){
+			map.put(dc.getnCodigoDocente(),cursoGraduacaoDAO.findByID(dc.getnCodigoCurso()));
+		}
 		this.closeXML();
-		return listaDocenteCurso;
+		return map;
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<CargoArea> getCargoArea(){
-		List<CargoArea> listaCargoArea;
+	public HashMap<Integer, String> getCargoArea(){
+	
 		this.abrirXML("Cargo Area.xml");
 		stream.alias("Cargo_x0020_Area", CargoArea.class);
-		listaCargoArea = (List<CargoArea>) stream.fromXML(input);
+		HashMap<Integer, String> map = new HashMap<Integer, String>();
+		for(CargoArea ca :(List<CargoArea>) stream.fromXML(input)){
+			map.put(ca.getnCodigoCargo(), ca.getDescricaoCargo());
+		}
 		this.closeXML();
-		return listaCargoArea;
+		return map;
 	}
 	
 	
 
 	@SuppressWarnings("unchecked")
 	public void importarHistoricoCargo(){
-		List<HistoricoCargoCurso> listaCargoCurso;
 		this.abrirXML("Historico Cargo Curso.xml");
 		stream.alias("Historico_x0020_Cargo_x0020_Curso", HistoricoCargoCurso.class);
-		listaCargoCurso = (List<HistoricoCargoCurso>) stream.fromXML(input);	
+		stream.registerConverter(new HistoricoCargoCursoConverter()); 
+		List<HistoricoCargoCurso> listaCargoCurso = (List<HistoricoCargoCurso>) stream.fromXML(input);	
 		this.closeXML();
+		
+		DocenteDAO docenteDAO = new DocenteDAO();
+		
+//		HashMap<Integer, CursoGraduacao> mapDocenteCurso = this.getDocenteCurso();
+		HashMap<Integer, String> mapCargoArea = this.getCargoArea();
+		
+		
+		HistoricoCargoDAO historicoCargoDAO = new HistoricoCargoDAO();
+		HistoricoCargo historicoCargo;
+		
+		ArrayList<HistoricoCargo> listaCargo = new ArrayList<HistoricoCargo>();
+		CargoDAO cargoDAO = new CargoDAO();
+		CursoGraduacaoDAO cursoGraduacaoDAO = new CursoGraduacaoDAO();
+		
+		System.out.println("HISTORICO CURSO");
+		for(HistoricoCargoCurso hcc:listaCargoCurso){
+			historicoCargo = new HistoricoCargo();
+			
+			historicoCargo.setDataInicio(hcc.getData_x0020_Inicio());
+			System.out.println(" AQUI "+hcc.getData_x0020_Fim());
+			if(hcc.getData_x0020_Fim() != null) historicoCargo.setDataFinal(hcc.getData_x0020_Fim());
+			historicoCargo.setDocente(docenteDAO.findByIdXml(hcc.getnCodigoDocente()));
+			historicoCargo.setCargo(cargoDAO.findByCargoAndVinculo(mapCargoArea.get(hcc.getnCodigoCargo()), 2, cursoGraduacaoDAO.findByID(hcc.getNCodigoCurso())));
+			System.out.println("DOCENTE: " + historicoCargo.getDocente().getSiape()+ " Cargo: "+historicoCargo.getCargo().getNomeCargo());
+			
+			listaCargo.add(historicoCargo);
+		}
+		
+		historicoCargoDAO.salvarCargoNoHistorico(listaCargo);
+		System.out.println("FIM HISTORICO CURSO");
 		
 		
 		
