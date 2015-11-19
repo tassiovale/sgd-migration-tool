@@ -84,5 +84,8 @@ public class CentroDAO extends GenericDAO<Centro> implements Serializable{
 		return getCriteria().add(Restrictions.ilike("nomeCentro", "%" + parteNomeCentro + "%")).list();
 	}
 
+	public Centro findCentro(String centro){
+		return (Centro) getCriteria().add(Restrictions.eq("nomeCentro", centro)).uniqueResult();
+	}
 
 }

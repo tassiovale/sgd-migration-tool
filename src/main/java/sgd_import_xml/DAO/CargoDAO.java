@@ -66,9 +66,19 @@ public class CargoDAO extends GenericDAO<Cargo> implements Serializable{
 		return (Cargo) getCriteria().add(Restrictions.eq("nomeCargo", cargo)).uniqueResult();
 	}
 	
-	public Cargo findByCargoAndVinculo(String cargo,int vinculo, CursoGraduacao cursoGraduacao){
+	public Cargo findByCargoVinculoCurso(String cargo,int vinculo, CursoGraduacao cursoGraduacao){
 		Criteria criteria = getCriteria();
 		return (Cargo) criteria.add(Restrictions.and(Restrictions.eq("nomeCargo", cargo), Restrictions.eq("vinculo", vinculo), Restrictions.eq("cursoGraduacao", cursoGraduacao))).uniqueResult();	
+	}
+	
+	public Cargo findByCargoVinculoAreaConhecimento(String cargo,int vinculo, AreaConhecimento areaConhecimento){
+		Criteria criteria = getCriteria();
+		return (Cargo) criteria.add(Restrictions.and(Restrictions.eq("nomeCargo", cargo), Restrictions.eq("vinculo", vinculo), Restrictions.eq("area", areaConhecimento))).uniqueResult();	
+	}
+	
+	public Cargo findByCargoVinculoCentro(String cargo,int vinculo, Centro centro){
+		Criteria criteria = getCriteria();
+		return (Cargo) criteria.add(Restrictions.and(Restrictions.eq("nomeCargo", cargo), Restrictions.eq("vinculo", vinculo), Restrictions.eq("centro", centro))).uniqueResult();	
 	}
 	
 	@SuppressWarnings("rawtypes")

@@ -4,21 +4,15 @@ import java.util.Date;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
-@XStreamAlias("Historico_x0020_Cargo_x0020_Curso")
-public class HistoricoCargoCurso {
-
-	private int nCodigoCurso;
+@XStreamAlias("Historico_x0020_Cargo")
+public class HistoricoCargoCentro {
+	
 	private int Sequencia;
 	private int nCodigoDocente;
 	private int nCodigoCargo;
 	private Date Data_x0020_Inicio;
 	private Date Data_x0020_Fim;
-	public int getnCodigoCurso() {
-		return nCodigoCurso;
-	}
-	public void setnCodigoCurso(int nCodigoCurso) {
-		this.nCodigoCurso = nCodigoCurso;
-	}
+	
 	public int getSequencia() {
 		return Sequencia;
 	}
@@ -30,12 +24,6 @@ public class HistoricoCargoCurso {
 	}
 	public void setnCodigoDocente(int nCodigoDocente) {
 		this.nCodigoDocente = nCodigoDocente;
-	}
-	public int getnCodigoCargo() {
-		return nCodigoCargo;
-	}
-	public void setnCodigoCargo(int nCodigoCargo) {
-		this.nCodigoCargo = nCodigoCargo;
 	}
 	public Date getData_x0020_Inicio() {
 		return Data_x0020_Inicio;
@@ -49,7 +37,11 @@ public class HistoricoCargoCurso {
 	public void setData_x0020_Fim(Date data_x0020_Fim) {
 		Data_x0020_Fim = data_x0020_Fim;
 	}
-	
-	
+	public int getnCodigoCargo() {
+		return nCodigoCargo;
+	}
+	public void setnCodigoCargo(int nCodigoCargo) {
+		this.nCodigoCargo = nCodigoCargo;
+	}
 	
 }

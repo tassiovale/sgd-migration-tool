@@ -10,50 +10,47 @@ import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
-import sgd_import_xml.entity.HistoricoCargoCurso;
+import sgd_import_xml.entity.HistoricoCargoAreaConhecimento;
 
-public class HistoricoCargoCursoConverter implements Converter{
+public class HistoricoCargoAreaConhecimentoConverter implements Converter{
 
 	@Override
 	public boolean canConvert(@SuppressWarnings("rawtypes") Class type) {
-		return type.equals(HistoricoCargoCurso.class);
+		return type.equals(HistoricoCargoAreaConhecimento.class);
 	}
 
 	@Override
-	public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {}
 
 	@Override
 	public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
-		HistoricoCargoCurso historicoCargoCurso = new HistoricoCargoCurso();
+		HistoricoCargoAreaConhecimento historicoCargoAreaConhecimento = new HistoricoCargoAreaConhecimento();
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		
 		while(reader.hasMoreChildren()){
 			reader.moveDown();
 			
-			if(reader.getNodeName().equals("nCodigoCurso")){
+			if(reader.getNodeName().equals("nCodigoArea")){
 //				System.out.println("CONVERSOR: Codigo "+ Integer.parseInt(reader.getValue()));
-				historicoCargoCurso.setnCodigoCurso(Integer.parseInt(reader.getValue()));
+				historicoCargoAreaConhecimento.setnCodigoArea(Integer.parseInt(reader.getValue()));
 			}else if (reader.getNodeName().equals("Sequencia")){
 //				System.out.println("CONVERSOR: Sequencia "+ Integer.parseInt(reader.getValue()));
-				historicoCargoCurso.setSequencia(Integer.parseInt(reader.getValue()));
+				historicoCargoAreaConhecimento.setSequencia(Integer.parseInt(reader.getValue()));
 			}else if(reader.getNodeName().equals("nCodigoDocente")){
 //				System.out.println("CONVERSOR: codigo Docente "+ Integer.parseInt(reader.getValue()));
-				historicoCargoCurso.setnCodigoDocente(Integer.parseInt(reader.getValue()));
+				historicoCargoAreaConhecimento.setnCodigoDocente(Integer.parseInt(reader.getValue()));
 			}else if(reader.getNodeName().equals("nCodigoCargo")){
 //				System.out.println("CONVERSOR: Codigo Cargo "+ Integer.parseInt(reader.getValue()));
-				historicoCargoCurso.setnCodigoCargo(Integer.parseInt(reader.getValue()));
+				historicoCargoAreaConhecimento.setnCodigoCargo(Integer.parseInt(reader.getValue()));
 			}else if(reader.getNodeName().equals("Data_x0020_Inicio")){
 				try {
-					historicoCargoCurso.setData_x0020_Inicio((Date) format.parse(reader.getValue().split("T")[0]));
+					historicoCargoAreaConhecimento.setData_x0020_Inicio((Date) format.parse(reader.getValue().split("T")[0]));
 				} catch (ParseException e) {
 					e.printStackTrace();
 				}
 			}else if(reader.getNodeName().equals("Data_x0020_Fim")){
 				try {
-					historicoCargoCurso.setData_x0020_Fim((Date) format.parse(reader.getValue().split("T")[0]));
+					historicoCargoAreaConhecimento.setData_x0020_Fim((Date) format.parse(reader.getValue().split("T")[0]));
 				} catch (ParseException e) {
 					e.printStackTrace();
 				}
@@ -63,7 +60,7 @@ public class HistoricoCargoCursoConverter implements Converter{
 		}
 		
 		
-		return historicoCargoCurso;
+		return historicoCargoAreaConhecimento;
 	}
 
 }

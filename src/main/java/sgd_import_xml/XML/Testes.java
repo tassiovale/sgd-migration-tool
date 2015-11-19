@@ -6,7 +6,8 @@ import sgd_import_xml.entity.Centro;
 public class Testes {
 	public static void main(String[] args) {
 		XML xml = new XML();
-	
+		
+		System.out.println("COMECO");
 		xml.importarAreaConhecimento();	
 		System.out.println("NEXT");
 		xml.importarCargaHoraria();
@@ -31,10 +32,12 @@ public class Testes {
 		System.out.println("NEXT");	
 		xml.importarCargo();
 		System.out.println("NEXT");
-		System.out.println("NEXT");	
-		System.out.println("NEXT");	
-		xml.importarHistoricoCargo();
-		
+		xml.importarHistoricoCargoCurso();
+		System.out.println("NEXT");
+		xml.importarHistoricoCargoAreaConhecimento();
+		System.out.println("NEXT");
+		xml.importarHistoricoCargoAreaCentro();
+		System.out.println("FIM");
 		
 	}
 }

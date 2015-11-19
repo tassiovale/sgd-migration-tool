@@ -4,20 +4,21 @@ import java.util.Date;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
-@XStreamAlias("Historico_x0020_Cargo_x0020_Curso")
-public class HistoricoCargoCurso {
-
-	private int nCodigoCurso;
+@XStreamAlias("Historico_x0020_Cargo")
+public class HistoricoCargoAreaConhecimento {
+	
+	private int nCodigoArea;
 	private int Sequencia;
 	private int nCodigoDocente;
 	private int nCodigoCargo;
 	private Date Data_x0020_Inicio;
 	private Date Data_x0020_Fim;
-	public int getnCodigoCurso() {
-		return nCodigoCurso;
+	
+	public int getnCodigoArea() {
+		return nCodigoArea;
 	}
-	public void setnCodigoCurso(int nCodigoCurso) {
-		this.nCodigoCurso = nCodigoCurso;
+	public void setnCodigoArea(int nCodigoArea) {
+		this.nCodigoArea = nCodigoArea;
 	}
 	public int getSequencia() {
 		return Sequencia;
@@ -49,7 +50,8 @@ public class HistoricoCargoCurso {
 	public void setData_x0020_Fim(Date data_x0020_Fim) {
 		Data_x0020_Fim = data_x0020_Fim;
 	}
+
 	
 	
-	
+
 }

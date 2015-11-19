@@ -28,15 +28,15 @@ public class Cargo implements Serializable, BaseEntity {
 	@Column(name="vinculo")
 	private int vinculo;
 	
-	@Column(name="area_conhecimento")
+	@ManyToOne
 	@JoinColumn(name="id_area")
 	private AreaConhecimento area;
 	
-	@Column(name="curso_graduacao")
-	@JoinColumn(name="id_cursoGrad")
+	@ManyToOne
+	@JoinColumn(name="id_centro")
 	private Centro centro;
 	
-	@Column(name="id_centro")
+	@ManyToOne
 	@JoinColumn(name="id_cursoGrad")
 	private CursoGraduacao cursoGraduacao;
 
